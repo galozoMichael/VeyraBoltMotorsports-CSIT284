@@ -21,7 +21,6 @@
 
             <!-- ============================================= -->
             <!-- TOP BAR: Logo + Brand Name | Cart Icon        -->
-            <!-- Full-width bar touching both edges            -->
             <!-- ============================================= -->
             <LinearLayout
                 android:layout_width="match_parent"
