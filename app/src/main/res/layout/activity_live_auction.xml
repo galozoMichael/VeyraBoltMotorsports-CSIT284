@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E0E0E">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- ===================== -->
+            <!-- VIDEO / STREAM FRAME  -->
+            <!-- ===================== -->
+            <FrameLayout
+                android:id="@+id/videoFrame"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="#111111">
+
+                <!-- Video / thumbnail goes here -->
+                <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- Play button overlay -->
+                <ImageView
+                    android:id="@+id/btnPlay"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_red_outline"
+                    android:padding="12dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:contentDescription="Play stream"
+                    app:tint="#E53935"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <!-- LIVE badge -->
+                <TextView
+                    android:id="@+id/tvLiveBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/bg_red_badge"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="● LIVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08" />
+
+                <!-- Viewer count -->
+                <TextView
+                    android:id="@+id/tvViewerCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/bg_dark_pill"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="👁  1.2k watching"
+                    android:textColor="#CCCCCC"
+                    android:textSize="11sp" />
+
+                <!-- Stream duration -->
+                <TextView
+                    android:id="@+id/tvDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/bg_dark_pill"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="02:14:38"
+                    android:textColor="#CCCCCC"
+                    android:textSize="11sp" />
+
+            </FrameLayout>
+
+            <!-- ===================== -->
+            <!-- BODY CONTENT          -->
+            <!-- ===================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Event title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CARSHOW WEEK"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05" />
+
+                <!-- Subtitle -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Veyra Bolt Motorsports  ·  May 6, 2026"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+                <!-- Red accent rule -->
+                <View
+                    android:layout_width="36dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="#E53935"
+                    android:background_radius="2dp" />
+
+                <!-- Description + Chat row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <!-- Description -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:paddingEnd="12dp"
+                        android:text="Join us for the ultimate Veyra Bolt Motorsports Carshow — exclusive performance gear, racing apparel drops, and high-octane builds showcased live by our top mechanics."
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="3dp" />
+
+                    <!-- Live Chat card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#1A1A1A"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#2A2A2A"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Chat header -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:padding="10dp"
+                                android:background="#1A1A1A">
+
+                                <ImageView
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:src="@drawable/ic_chat_bubble"
+                                    app:tint="#E53935"
+                                    android:layout_marginEnd="6dp"
+                                    android:contentDescription="Chat" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Live Chat"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#2A2A2A" />
+
+                            <!-- Chat messages (RecyclerView in production) -->
+                            <LinearLayout
+                                android:id="@+id/chatContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:clipToPadding="true">
+
+                                <!-- Message 1 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="6dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SpeedFreak99" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wow cool! 🔥" android:textColor="#DDDDDD" android:textSize="11sp" />
+                                </LinearLayout>
+
+                                <!-- Message 2 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="6dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RacerX" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Need that new gear!" android:textColor="#DDDDDD" android:textSize="11sp" />
+                                </LinearLayout>
+
+                                <!-- Message 3 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BoltHead_PH" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Is the helmet bidding open?" android:textColor="#DDDDDD" android:textSize="11sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#2A2A2A" />
+
+                            <!-- Chat input -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:padding="8dp"
+                                android:paddingEnd="8dp">
+
+                                <EditText
+                                    android:id="@+id/etChatInput"
+                                    android:layout_width="0dp"
+                                    android:layout_height="28dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_input_dark"
+                                    android:hint="Say something…"
+                                    android:hintTextColor="#555555"
+                                    android:textColor="#DDDDDD"
+                                    android:textSize="10sp"
+                                    android:paddingHorizontal="8dp"
+                                    android:inputType="text"
+                                    android:imeOptions="actionSend"
+                                    android:maxLines="1" />
+
+                                <ImageView
+                                    android:id="@+id/btnSendChat"
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_marginStart="6dp"
+                                    android:background="@drawable/bg_red_icon_btn"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_send"
+                                    app:tint="#FFFFFF"
+                                    android:contentDescription="Send"
+                                    android:clickable="true"
+                                    android:focusable="true" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- ===================== -->
+                <!-- BID SECTION           -->
+                <!-- ===================== -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#1A1A1A"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#2A2A2A"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <!-- Current bid + next min row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="12dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="CURRENT BID"
+                                    android:textColor="#666666"
+                                    android:textSize="10sp"
+                                    android:letterSpacing="0.1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvCurrentBid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="₱ 4,200"
+                                    android:textColor="#E53935"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="end">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="NEXT MIN."
+                                    android:textColor="#666666"
+                                    android:textSize="10sp"
+                                    android:letterSpacing="0.1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvNextBid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="₱ 4,400"
+                                    android:textColor="#888888"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Countdown timer row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_dark_inset"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="8dp"
+                            android:layout_marginBottom="12dp">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_clock"
+                                app:tint="#E53935"
+                                android:layout_marginEnd="8dp"
+                                android:contentDescription="Timer" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Auction ends in"
+                                android:textColor="#666666"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tvTimer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00:04:57"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.08" />
+
+                        </LinearLayout>
+
+                        <!-- Place Bid button -->
+                        <Button
+                            android:id="@+id/btnPlaceBid"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:text="🔨  Place Bid — ₱ 4,400"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.05"
+                            android:backgroundTint="#E53935"
+                            app:cornerRadius="8dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- ===================== -->
+                <!-- STATS ROW             -->
+                <!-- ===================== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="14dp"
+                    android:baselineAligned="false">
+
+                    <!-- Total Bids -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_stat_card"
+                        android:padding="10dp">
+                        <TextView android:id="@+id/tvTotalBids" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="23" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TOTAL BIDS" android:textColor="#555555" android:textSize="9sp" android:letterSpacing="0.08" />
+                    </LinearLayout>
+
+                    <!-- Starting Price -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_stat_card"
+                        android:padding="10dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₱1,200" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STARTING" android:textColor="#555555" android:textSize="9sp" android:letterSpacing="0.08" />
+                    </LinearLayout>
+
+                    <!-- Item name -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_stat_card"
+                        android:padding="10dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Helmet" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ITEM" android:textColor="#555555" android:textSize="9sp" android:letterSpacing="0.08" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#151515"
+        app:itemIconTint="@drawable/nav_item_color"
+        app:itemTextColor="@drawable/nav_item_color"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
