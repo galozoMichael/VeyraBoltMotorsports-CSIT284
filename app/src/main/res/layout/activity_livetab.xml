@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111111">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- ============================================= -->
+            <!-- TOP BAR: Logo Header                          -->
+            <!-- ============================================= -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#1A1A1A"
+                android:padding="14dp">
+
+                <!-- Logo -->
+                <ImageView
+                    android:id="@+id/imgTopLogo"
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/veyraboltlogo"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Veyra Bolt Logo" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2A2A2A" />
+
+            <!-- ============================================= -->
+            <!-- SECTION: Video Player Placeholder             -->
+            <!-- ============================================= -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="#444444"
+                app:strokeWidth="1dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Video Placeholder Image -->
+                    <ImageView
+                        android:id="@+id/imgVideoPlaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerInside"
+                        android:src="@android:drawable/ic_menu_gallery"
+                        app:tint="#333333"
+                        android:contentDescription="Video Feed" />
+
+                    <!-- Play Button Overlay -->
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:src="@android:drawable/ic_media_play"
+                        app:tint="#FFFFFF"
+                        android:contentDescription="Play Video" />
+
+                    <!-- Live Badge -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/bg_live_badge"
+                        android:text="● LIVE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp" />
+
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ============================================= -->
+            <!-- SECTION: Details & Live Chat Split            -->
+            <!-- ============================================= -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:baselineAligned="false">
+
+                <!-- Left Column: Title and Description -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carshow Week"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Join us for the ultimate Veyra Bolt Motorsports Carshow! Discover the latest performance gear, check out exclusive racing apparel dropping this week, and witness high-octane builds showcased live by our top mechanics."
+                        android:textColor="#AAAAAA"
+                        android:textSize="13sp"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+
+                <!-- Right Column: Live Chat Box -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_chat_box"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Live Chat"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#444444"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Chat Item 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_myplaces"
+                            app:tint="#AAAAAA"
+                            android:layout_marginTop="2dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SpeedFreak99" android:textColor="#888888" android:textSize="10sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wow Cool!" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Chat Item 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_camera"
+                            app:tint="#AAAAAA"
+                            android:layout_marginTop="2dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RacerX" android:textColor="#888888" android:textSize="10sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Need that new gear 🔥" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav pinned to bottom -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#1A1A1A"
+        app:itemIconTint="@drawable/nav_item_color"
+        app:itemTextColor="@drawable/nav_item_color"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
