@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E0E0E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="56dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="#151515">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MY TICKETS"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="2 Upcoming Events"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1E1E1E" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:paddingBottom="24dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#1A1A1A"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E53935"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="#E53935"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="0dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="8dp" android:paddingVertical="4dp" android:text="VIP ACCESS" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.05" />
+                                </androidx.cardview.widget.CardView>
+
+                                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#VB-09924" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="CARSHOW WEEK"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.02" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Wednesday, May 6, 2026 • 10:00 AM"
+                                android:textColor="#AAAAAA"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="16dp"
+                                android:background="#111111"
+                                android:padding="10dp"
+                                android:baselineAligned="false">
+
+                                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GATE" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A1" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SECTION" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VIP-C" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SEAT" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14" android:textColor="#E53935" android:textSize="16sp" android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#2A2A2A" android:layout_marginHorizontal="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:background="#151515">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="|| | |||| || | | |||| || |" android:textColor="#000000" android:textSize="32sp" android:textStyle="bold" android:scaleX="1.5" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SCAN AT ENTRANCE" android:textColor="#555555" android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.2" android:layout_marginTop="4dp"/>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#1A1A1A"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#2A2A2A"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="#333333"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="0dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="8dp" android:paddingVertical="4dp" android:text="GENERAL ADMISSION" android:textColor="#CCCCCC" android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.05" />
+                                </androidx.cardview.widget.CardView>
+
+                                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#VB-10842" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="TIME ATTACK CHAMPIONSHIP"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.02" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Saturday, May 9, 2026 • 3:00 PM"
+                                android:textColor="#AAAAAA"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="16dp"
+                                android:background="#111111"
+                                android:padding="10dp">
+
+                                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VENUE" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="East Circuit - Bleachers" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#151515"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
