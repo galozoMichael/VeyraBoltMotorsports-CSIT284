@@ -3,11 +3,10 @@ package com.example.veyraboltmotorsports
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class TicketsActivity : AppCompatActivity() {
+class LiveTabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tickets)
-
+        setContentView(R.layout.activity_livetab)
         val bottomNav = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottomNav)
 
         bottomNav.setOnItemSelectedListener { item ->
@@ -22,12 +21,12 @@ class TicketsActivity : AppCompatActivity() {
                     finish()
                     true
                 }
-                R.id.nav_tickets -> true
-                R.id.nav_profile -> {
-                    startActivity(android.content.Intent(this, EventCalendarActivity::class.java))
+                R.id.nav_tickets -> {
+                    startActivity(android.content.Intent(this, TicketsActivity::class.java))
                     finish()
                     true
                 }
+                R.id.nav_profile -> true
                 else -> false
             }
         }
