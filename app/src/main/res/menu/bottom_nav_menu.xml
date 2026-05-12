@@ -6,15 +6,15 @@
         android:title="Home" />
 
     <item android:id="@+id/nav_shop"
-        android:icon="@android:drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_shoppingcart"
         android:title="Shop" />
 
     <item android:id="@+id/nav_tickets"
-        android:icon="@android:drawable/ic_menu_agenda"
+        android:icon="@drawable/tickets"
         android:title="Tickets" />
 
     <item android:id="@+id/nav_profile"
-        android:icon="@android:drawable/ic_menu_myplaces"
+        android:icon="@drawable/ic_profile"
         android:title="Profile" />
 
 </menu>
