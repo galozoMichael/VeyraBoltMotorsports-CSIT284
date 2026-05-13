@@ -9,7 +9,7 @@ class TicketsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_tickets)
 
         val bottomNav = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottomNav)
-
+        bottomNav.selectedItemId = R.id.nav_tickets
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {

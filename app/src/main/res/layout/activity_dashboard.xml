@@ -136,7 +136,7 @@
 
                 </LinearLayout>
 
-                <!-- Gear -->
+                <!-- Auction -->
                 <LinearLayout
                     android:id="@+id/btnGear"
                     android:layout_width="0dp"
@@ -151,14 +151,14 @@
                     <ImageView
                         android:layout_width="28dp"
                         android:layout_height="28dp"
-                        android:src="@android:drawable/ic_menu_manage"
-                        android:contentDescription="Gear" />
+                        android:src="@drawable/auction"
+                        android:contentDescription="Live Auction" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Gear"
+                        android:text="Auction"
                         android:textColor="#CCCCCC"
                         android:textSize="11sp" />
 

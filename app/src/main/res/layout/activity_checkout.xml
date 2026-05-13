@@ -37,7 +37,7 @@
                     android:id="@+id/btnBack"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@android:drawable/ic_media_previous"
+                    android:src="@drawable/backarrow"
                     app:tint="#FFFFFF"
                     android:contentDescription="Back"
                     android:clickable="true"

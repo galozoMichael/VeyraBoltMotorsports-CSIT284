@@ -9,6 +9,7 @@ class EventCalendarActivity : AppCompatActivity() {
         setContentView(R.layout.activity_event_calendar)
 
         val bottomNav = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottomNav)
+        bottomNav.selectedItemId = R.id.nav_profile
 
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {

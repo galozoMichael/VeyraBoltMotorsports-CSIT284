@@ -11,6 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
+        // Profile Navigation
+        val imgProfile = findViewById<android.widget.ImageView>(R.id.imgProfile)
+        imgProfile.setOnClickListener {
+            startActivity(android.content.Intent(this, LoginActivity::class.java))
+        }
+
         // Live Button Navigation
         val btnLive = findViewById<android.view.View>(R.id.btnLive)
         btnLive.setOnClickListener {
@@ -18,8 +24,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Auction Button Navigation
+        val btnGear = findViewById<android.view.View>(R.id.btnGear)
+        btnGear.setOnClickListener {
+            startActivity(android.content.Intent(this, LiveAuctionActivity::class.java))
+        }
+
         // Bottom Navigation
         val bottomNav = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottomNav)
+        bottomNav.selectedItemId = R.id.nav_home
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> true // Already on Home

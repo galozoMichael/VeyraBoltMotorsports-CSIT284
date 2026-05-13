@@ -15,6 +15,19 @@
         android:paddingTop="48dp"
         android:paddingBottom="36dp">
 
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/backarrow"
+            app:tint="#FFFFFF"
+            android:contentDescription="Back"
+            android:clickable="true"
+            android:focusable="true"/>
+
         <!-- Logo placeholder -->
         <ImageView
             android:id="@+id/imgLogo"

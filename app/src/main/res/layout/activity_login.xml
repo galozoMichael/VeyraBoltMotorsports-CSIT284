@@ -15,7 +15,21 @@
         android:paddingTop="48dp"
         android:paddingBottom="36dp">
 
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/backarrow"
+            app:tint="#FFFFFF"
+            android:contentDescription="Back"
+            android:clickable="true"
+            android:focusable="true"/>
+
         <!-- Logo placeholder -->
+
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="160dp"
@@ -127,6 +141,18 @@
             app:rippleColor="#B71C1C" />
 
         <!-- Forgot Password -->
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Don't have an account? Register"
+            android:textColor="#AAAAAA"
+            android:textSize="13sp" />
+
         <TextView
             android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"

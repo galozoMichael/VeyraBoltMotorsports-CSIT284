@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/nav_home"
-        android:icon="@android:drawable/ic_menu_compass"
+        android:icon="@drawable/home"
         android:title="Home" />
 
     <item android:id="@+id/nav_shop"
@@ -14,7 +14,7 @@
         android:title="Tickets" />
 
     <item android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_profile"
-        android:title="Profile" />
+        android:icon="@drawable/ic_calendar"
+        android:title="Calendar" />
 
 </menu>
