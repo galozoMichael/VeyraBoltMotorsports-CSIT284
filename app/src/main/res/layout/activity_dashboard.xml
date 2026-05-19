@@ -176,25 +176,27 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
-            <FrameLayout
-                android:id="@+id/bannerMerch"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/quick_access_bg"
-                android:clickable="true"
-                android:focusable="true">
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#444444"
+                app:strokeWidth="1dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:layout_margin="12dp"
-                    android:text="Click to view"
-                    android:textColor="#AAAAAA"
-                    android:textSize="11sp" />
+                <ImageView
+                    android:id="@+id/bannerMerch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tshirt"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Merch banner"
+                    android:clickable="true"
+                    android:focusable="true" />
 
-            </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- News label -->
             <TextView

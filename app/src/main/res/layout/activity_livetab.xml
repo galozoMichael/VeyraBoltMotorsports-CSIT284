@@ -62,6 +62,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <!-- Actual video (hidden until play is tapped) -->
+                    <VideoView
+                        android:id="@+id/videoLive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
                     <!-- Video Placeholder Image -->
                     <ImageView
                         android:id="@+id/imgVideoPlaceholder"
@@ -74,12 +82,15 @@
 
                     <!-- Play Button Overlay -->
                     <ImageView
+                        android:id="@+id/btnPlayLive"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_gravity="center"
                         android:src="@android:drawable/ic_media_play"
                         app:tint="#FFFFFF"
-                        android:contentDescription="Play Video" />
+                        android:contentDescription="Play Video"
+                        android:clickable="true"
+                        android:focusable="true" />
 
                     <!-- Live Badge -->
                     <TextView
@@ -163,51 +174,106 @@
                         android:background="#444444"
                         android:layout_marginBottom="12dp" />
 
-                    <!-- Chat Item 1 -->
+                    <!-- Scrollable messages -->
+                    <ScrollView
+                        android:id="@+id/chatScrollLive"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:scrollbars="none"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:id="@+id/chatContainerLive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Chat Item 1 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="12dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@android:drawable/ic_menu_myplaces"
+                                    app:tint="#AAAAAA"
+                                    android:layout_marginTop="2dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="8dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SpeedFreak99" android:textColor="#888888" android:textSize="10sp" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wow Cool!" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginTop="2dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Chat Item 2 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@android:drawable/ic_menu_camera"
+                                    app:tint="#AAAAAA"
+                                    android:layout_marginTop="2dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="8dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RacerX" android:textColor="#888888" android:textSize="10sp" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Need that new gear 🔥" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginTop="2dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <!-- Input row -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="12dp">
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/etChatInputLive"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:background="#2A2A2A"
+                            android:hint="Say something…"
+                            android:textColorHint="#666666"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:inputType="text"
+                            android:imeOptions="actionSend"
+                            android:maxLines="1" />
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@android:drawable/ic_menu_myplaces"
-                            app:tint="#AAAAAA"
-                            android:layout_marginTop="2dp" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SpeedFreak99" android:textColor="#888888" android:textSize="10sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wow Cool!" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginTop="2dp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <!-- Chat Item 2 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@android:drawable/ic_menu_camera"
-                            app:tint="#AAAAAA"
-                            android:layout_marginTop="2dp" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RacerX" android:textColor="#888888" android:textSize="10sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Need that new gear 🔥" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginTop="2dp" />
-                        </LinearLayout>
+                            android:id="@+id/btnSendChatLive"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_marginStart="6dp"
+                            android:background="#E53935"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_send"
+                            app:tint="#FFFFFF"
+                            android:contentDescription="Send"
+                            android:clickable="true"
+                            android:focusable="true" />
                     </LinearLayout>
 
                 </LinearLayout>

@@ -128,12 +128,12 @@
                         android:layout_marginEnd="6dp">
 
                         <ImageView
-                            android:layout_width="56dp"
-                            android:layout_height="56dp"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
                             android:layout_gravity="center"
                             android:src="@android:drawable/ic_menu_myplaces"
                             android:contentDescription="Boots"
-                            android:scaleType="centerInside" />
+                            android:scaleType="fitCenter" />
 
                     </FrameLayout>
 
@@ -145,12 +145,12 @@
                         android:layout_marginEnd="6dp">
 
                         <ImageView
-                            android:layout_width="56dp"
-                            android:layout_height="56dp"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
                             android:layout_gravity="center"
                             android:src="@android:drawable/ic_menu_compass"
                             android:contentDescription="Visor"
-                            android:scaleType="centerInside" />
+                            android:scaleType="fitCenter" />
 
                     </FrameLayout>
 
@@ -161,12 +161,12 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:layout_width="56dp"
-                            android:layout_height="56dp"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
                             android:layout_gravity="center"
                             android:src="@android:drawable/ic_menu_manage"
                             android:contentDescription="Racing suit"
-                            android:scaleType="centerInside" />
+                            android:scaleType="fitCenter" />
 
                     </FrameLayout>
 
@@ -256,11 +256,12 @@
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="52dp"
-                                android:layout_height="52dp"
-                                android:src="@android:drawable/ic_menu_gallery"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/teetrans"
                                 android:contentDescription="T-Shirt 1"
-                                android:scaleType="centerInside" />
+                                android:scaleType="fitCenter" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -296,11 +297,12 @@
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="52dp"
-                                android:layout_height="52dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:src="@android:drawable/ic_menu_gallery"
                                 android:contentDescription="T-Shirt 2"
-                                android:scaleType="centerInside" />
+                                android:scaleType="fitCenter" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -336,11 +338,12 @@
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="52dp"
-                                android:layout_height="52dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:src="@android:drawable/ic_menu_gallery"
                                 android:contentDescription="T-Shirt 3"
-                                android:scaleType="centerInside" />
+                                android:scaleType="fitCenter" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -443,11 +446,12 @@
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="52dp"
-                                android:layout_height="52dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:src="@android:drawable/ic_menu_compass"
                                 android:contentDescription="Helmet"
-                                android:scaleType="centerInside" />
+                                android:scaleType="fitCenter" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -483,11 +487,12 @@
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="52dp"
-                                android:layout_height="52dp"
-                                android:src="@android:drawable/ic_menu_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/veyraboltmotorsportglovestrans"
                                 android:contentDescription="Gloves"
-                                android:scaleType="centerInside" />
+                                android:scaleType="fitCenter" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -523,11 +528,12 @@
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="52dp"
-                                android:layout_height="52dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:src="@android:drawable/ic_menu_info_details"
                                 android:contentDescription="Keychain"
-                                android:scaleType="centerInside" />
+                                android:scaleType="fitCenter" />
 
                             <TextView
                                 android:layout_width="wrap_content"

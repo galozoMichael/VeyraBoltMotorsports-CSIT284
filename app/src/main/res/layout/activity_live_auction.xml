@@ -194,34 +194,41 @@
                                 android:layout_height="0.5dp"
                                 android:background="#2A2A2A" />
 
-                            <!-- Chat messages (RecyclerView in production) -->
-                            <LinearLayout
-                                android:id="@+id/chatContainer"
+                            <!-- Chat messages (scrollable) -->
+                            <ScrollView
+                                android:id="@+id/chatScroll"
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:orientation="vertical"
-                                android:padding="10dp"
-                                android:clipToPadding="true">
+                                android:scrollbars="none"
+                                android:fillViewport="true">
 
-                                <!-- Message 1 -->
-                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="6dp">
-                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SpeedFreak99" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
-                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wow cool! 🔥" android:textColor="#DDDDDD" android:textSize="11sp" />
+                                <LinearLayout
+                                    android:id="@+id/chatContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <!-- Message 1 -->
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="6dp">
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SpeedFreak99" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wow cool! 🔥" android:textColor="#DDDDDD" android:textSize="11sp" />
+                                    </LinearLayout>
+
+                                    <!-- Message 2 -->
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="6dp">
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RacerX" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Need that new gear!" android:textColor="#DDDDDD" android:textSize="11sp" />
+                                    </LinearLayout>
+
+                                    <!-- Message 3 -->
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BoltHead_PH" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Is the helmet bidding open?" android:textColor="#DDDDDD" android:textSize="11sp" />
+                                    </LinearLayout>
+
                                 </LinearLayout>
-
-                                <!-- Message 2 -->
-                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="6dp">
-                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RacerX" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
-                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Need that new gear!" android:textColor="#DDDDDD" android:textSize="11sp" />
-                                </LinearLayout>
-
-                                <!-- Message 3 -->
-                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BoltHead_PH" android:textColor="#555555" android:textSize="10sp" android:textStyle="bold" />
-                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Is the helmet bidding open?" android:textColor="#DDDDDD" android:textSize="11sp" />
-                                </LinearLayout>
-
-                            </LinearLayout>
+                            </ScrollView>
 
                             <View
                                 android:layout_width="match_parent"
