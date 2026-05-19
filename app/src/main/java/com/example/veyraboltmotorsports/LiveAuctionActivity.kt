@@ -3,8 +3,10 @@ package com.example.veyraboltmotorsports
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -23,9 +25,33 @@ class LiveAuctionActivity : AppCompatActivity() {
     private lateinit var chatScroll: ScrollView
     private lateinit var etChatInput: EditText
 
+    private lateinit var tvTimer: TextView
+    private lateinit var tvCurrentBid: TextView
+    private lateinit var tvNextBid: TextView
+    private lateinit var tvTotalBids: TextView
+    private lateinit var btnPlaceBid: Button
+
+    private var currentBid = 4200
+    private var bidIncrement = 200
+    private var totalBids = 23
+    private var timer: CountDownTimer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_live_auction)
+
+        // ----- Back button -----
+        findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
+
+        // ----- Bid section -----
+        tvTimer = findViewById(R.id.tvTimer)
+        tvCurrentBid = findViewById(R.id.tvCurrentBid)
+        tvNextBid = findViewById(R.id.tvNextBid)
+        tvTotalBids = findViewById(R.id.tvTotalBids)
+        btnPlaceBid = findViewById(R.id.btnPlaceBid)
+
+        btnPlaceBid.setOnClickListener { placeBid() }
+        startTimer()
 
         // ----- Video player -----
         videoView = findViewById(R.id.videoView)
@@ -34,7 +60,12 @@ class LiveAuctionActivity : AppCompatActivity() {
         videoView.setVideoURI(
             Uri.parse("android.resource://$packageName/${R.raw.carshowvideo}")
         )
-        videoView.setOnPreparedListener { mp -> mp.isLooping = true }
+        videoView.setOnPreparedListener { mp ->
+            mp.isLooping = true
+            btnPlay.visibility = View.GONE
+            videoView.start()
+            hasStartedOnce = true
+        }
         videoView.setOnErrorListener { _, _, _ ->
             btnPlay.visibility = View.VISIBLE
             true
@@ -95,6 +126,37 @@ class LiveAuctionActivity : AppCompatActivity() {
     private fun dp(value: Int): Int =
         (value * resources.displayMetrics.density).toInt()
 
+    private fun startTimer() {
+        timer?.cancel()
+        timer = object : CountDownTimer(5 * 60 * 1000L, 1000L) {
+            override fun onTick(millisUntilFinished: Long) {
+                val min = (millisUntilFinished / 1000) / 60
+                val sec = (millisUntilFinished / 1000) % 60
+                tvTimer.text = String.format("00:%02d:%02d", min, sec)
+            }
+            override fun onFinish() {
+                currentBid = 0
+                totalBids = 0
+                updateBidUI()
+                startTimer()
+            }
+        }.start()
+    }
+
+    private fun placeBid() {
+        currentBid += bidIncrement
+        totalBids++
+        updateBidUI()
+    }
+
+    private fun updateBidUI() {
+        val nextBid = currentBid + bidIncrement
+        tvCurrentBid.text = "₱ ${String.format("%,d", currentBid)}"
+        tvNextBid.text = "₱ ${String.format("%,d", nextBid)}"
+        tvTotalBids.text = totalBids.toString()
+        btnPlaceBid.text = "🔨  Place Bid — ₱ ${String.format("%,d", nextBid)}"
+    }
+
     override fun onResume() {
         super.onResume()
         if (hasStartedOnce && !videoView.isPlaying) {
@@ -107,5 +169,10 @@ class LiveAuctionActivity : AppCompatActivity() {
         if (videoView.isPlaying) {
             videoView.pause()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        timer?.cancel()
     }
 }

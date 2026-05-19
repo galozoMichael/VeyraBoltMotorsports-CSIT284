@@ -20,8 +20,13 @@ class MainActivity : AppCompatActivity() {
         // Live Button Navigation
         val btnLive = findViewById<android.view.View>(R.id.btnLive)
         btnLive.setOnClickListener {
-            val intent = android.content.Intent(this, LiveTabActivity::class.java)
-            startActivity(intent)
+            startActivity(android.content.Intent(this, LiveTabActivity::class.java))
+        }
+
+        // Ticket Button Navigation
+        val btnTicket = findViewById<android.view.View>(R.id.btnTicket)
+        btnTicket.setOnClickListener {
+            startActivity(android.content.Intent(this, TicketsActivity::class.java))
         }
 
         // Auction Button Navigation

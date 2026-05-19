@@ -30,6 +30,9 @@ class LiveTabActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_livetab)
 
+        // ----- Back button -----
+        findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
+
         // ----- Video player -----
         videoLive = findViewById(R.id.videoLive)
         imgPlaceholder = findViewById(R.id.imgVideoPlaceholder)
@@ -38,7 +41,14 @@ class LiveTabActivity : AppCompatActivity() {
         videoLive.setVideoURI(
             Uri.parse("android.resource://$packageName/${R.raw.carshowvideo}")
         )
-        videoLive.setOnPreparedListener { mp -> mp.isLooping = true }
+        videoLive.visibility = View.VISIBLE
+        imgPlaceholder.visibility = View.GONE
+        btnPlay.visibility = View.GONE
+        videoLive.setOnPreparedListener { mp ->
+            mp.isLooping = true
+            videoLive.start()
+            hasStartedOnce = true
+        }
         videoLive.setOnErrorListener { _, _, _ ->
             videoLive.visibility = View.GONE
             imgPlaceholder.visibility = View.VISIBLE

@@ -19,6 +19,32 @@
             android:paddingBottom="24dp">
 
             <!-- ===================== -->
+            <!-- TOP BAR: Back Button  -->
+            <!-- ===================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#151515"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/backarrow"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Back"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <!-- ===================== -->
             <!-- VIDEO / STREAM FRAME  -->
             <!-- ===================== -->
             <FrameLayout
